@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:CusApp.Views"
+             mc:Ignorable="d"
+             x:Class="CusApp.Views.FriendsAndFamilyPage">
+    
+    <ContentPage.Content>
+
+    <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        
+       <Grid AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="0" Grid.Column="0" Margin="2" HorizontalOptions="FillAndExpand">
+            <StackLayout Padding="3,3,3,3" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Image Source="FriendsandFamily.png" Margin="5"/>
+                <Label Text="Friends and Family" FontSize="Small" Margin="5"/>
+            </StackLayout>
+        </Frame>
+
+        <ListView Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand"
+            ItemsSource="{Binding FriendsAndFamilyList}" Margin="5">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Frame>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="2"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="3"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding SerialNumber}" FontSize="Small" Grid.Column="0"/>
+                            <Label Text="{Binding BeneficiaryName}" FontSize="Small" Grid.Column="2"/>
+                            <Button ImageSource="ButtonImage3.png" Grid.Column="4" Command="{Binding ShareUnitCommand}"/>
+                            <Button ImageSource="ButtonImage2.png" Grid.Column="6" Command="{Binding DeleteBeneficiaryCommand}"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+
+            <!--Popup Area-->
+            <views:DeletePopUp IsVisible="{Binding IsDeletePopUpVisible}" 
+                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+
+            <views:ShareTripsPopUp IsVisible="{Binding IsShareTripsPopUpVisible}" 
+                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+
+   
+    
+
+</ContentPage>

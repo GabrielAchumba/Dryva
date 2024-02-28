@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="Gray"
+             x:Class="CusApp.Views.LoginRegisterPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+            <Label BackgroundColor="Gray" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Vertical" BackgroundColor="WhiteSmoke">
+            
+            <Label Text="Welcome to Uyo" TextColor="Orange" FontSize="Medium"
+                   HorizontalTextAlignment="Center" BackgroundColor="White"
+                   Margin="10"/>
+            <Label Text="{Binding Description}" HorizontalTextAlignment="Center"
+                   HorizontalOptions="CenterAndExpand" Margin="15"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button BackgroundColor="White" TextColor="Black" Grid.Column="0" Grid.Row="0"
+                                         Command="{Binding LoginCommand}"
+                                Text="LOGIN" FontSize="Small" HorizontalOptions="FillAndExpand"
+                        BorderColor="Black" BorderWidth="1" Margin="3"/>
+
+                <Button BackgroundColor="Black" TextColor="White" Grid.Column="1" Grid.Row="0"
+                                         Command="{Binding RegistrationCommand}"
+                                Text="REGISTER" FontSize="Small" HorizontalOptions="FillAndExpand"
+                         BorderColor="Black" BorderWidth="1" Margin="3"/>
+            </Grid>
+
+
+        </StackLayout>
+        
+
+    </Grid>
+</ContentPage>

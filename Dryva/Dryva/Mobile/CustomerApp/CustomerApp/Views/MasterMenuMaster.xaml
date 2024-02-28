@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Master Menu"
+             x:Class="CustomerApp.Views.MasterMenuMaster">
+    <StackLayout>
+
+
+        <ListView x:Name="MenuListView" ItemsSource="{Binding MasterPageItems}"
+              SeparatorVisibility="None"
+            x:FieldModifier="public">
+            <ListView.Header>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Frame  Padding="0">
+                        <Image Source="background.png"  Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" Aspect="Fill"/>
+                    </Frame>
+                    <StackLayout  Margin="20,0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Orientation="Vertical">
+                        <Frame Padding="0" CornerRadius="20" IsClippedToBounds="True" 
+                                WidthRequest="50" HeightRequest="50"  HorizontalOptions="Start">
+                            <Image x:Name="imgPix" Source="person.png"/>
+                        </Frame>
+                        <Label Text="{Binding Name}" FontSize="Small"  TextColor="White"/>
+
+                        <Button  Margin="0"   Padding="0" Text="Edit profile" FontSize="Micro"
+                        Command="{Binding EditprofileCommand}"  BackgroundColor="Transparent" TextColor="White" />
+                    </StackLayout>
+                </Grid>
+
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="0,10" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                            <Image Source="{Binding IconSource}" WidthRequest="50" HeightRequest="50"/>
+                            <Label VerticalOptions="FillAndExpand" VerticalTextAlignment="Center"
+                                   Text="{Binding Title}"/>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

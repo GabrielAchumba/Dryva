@@ -1,0 +1,142 @@
+{
+  "ReRoutes": [
+    //Reports Service
+    {
+      "DownstreamPathTemplate": "/api/Reports",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7883
+        }
+      ],
+      "UpstreamPathTemplate": "/Reports",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "Priority": 0
+    },
+    {
+      "DownstreamPathTemplate": "/api/Reports/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7883
+        }
+      ],
+      "UpstreamPathTemplate": "/Reports/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "Priority": 1
+    },
+    {
+      // Report from customers Service
+      "DownstreamPathTemplate": "/api/Customers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44302
+        }
+      ],
+      "UpstreamPathTemplate": "/Reports/GetCustomers",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "Priority": 2
+    },
+    {
+      // Report from Shareholders Service
+      "DownstreamPathTemplate": "/api/Shareholders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44302
+        }
+      ],
+      "UpstreamPathTemplate": "/Reports/GetInvestorsByShareholder",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "Priority": 2
+    },
+    {
+      // Report from RTPSs Service
+      "DownstreamPathTemplate": "/api/RTPSs",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44302
+        }
+      ],
+      "UpstreamPathTemplate": "/Reports/GetInvestorsByRTPS",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "Priority": 2
+    },
+    {
+      // Report from Drivers Service
+      "DownstreamPathTemplate": "/api/Drivers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44302
+        }
+      ],
+      "UpstreamPathTemplate": "/Reports/GetDrivers",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "Priority": 2
+    },
+    {
+      // Report from maps Service
+      "DownstreamPathTemplate": "/api/Maps",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7882
+        }
+      ],
+      "UpstreamPathTemplate": "/Reports/GetMaps",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "Priority": 2
+    }
+  ],
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "customer",
+        "state"
+      ],
+      "UpstreamPathTemplate": "/Reports/customermap",
+      //"Aggregator": "CustomerAggregator",
+      "Priority": 3
+    },
+    {
+      "ReRouteKeys": [
+        "customer",
+        "state"
+      ],
+      "UpstreamPathTemplate": "/Reports/customersubscription",
+      "Aggregator": "CustomerSubscriptionAggregator",
+      "Priority": 3
+    }
+  ]
+}

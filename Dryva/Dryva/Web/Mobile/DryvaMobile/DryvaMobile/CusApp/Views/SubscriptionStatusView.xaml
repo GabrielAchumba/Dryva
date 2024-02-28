@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CusApp.Views.SubscriptionStatusView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Padding="0"  Grid.Column="0" Grid.Row="0"  Margin="2">
+            <StackLayout Orientation="Vertical"
+                                        Padding="10">
+                <Picker Title="Select time range" ItemsSource="{Binding SerachingTimeList}" 
+                        SelectedItem="{Binding SelectedSerachingTime, Mode=TwoWay}"
+                    HorizontalOptions="FillAndExpand"
+                Margin="1"/>
+
+            </StackLayout>
+        </Frame>
+
+        
+        <ScrollView>
+            <StackLayout BindableLayout.ItemsSource="{Binding SubscriptionDTOList}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Grid.Row="0" Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame Padding="0"  Grid.Column="0" Grid.Row="0"  Margin="2">
+                                    <StackLayout Orientation="Vertical"
+                                        Padding="3">
+                                        <Label Text="Units"/>
+                                        <Label Text="{Binding Units}"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame Padding="0"  Grid.Column="1" Grid.Row="0"  Margin="2">
+                                    <StackLayout Orientation="Vertical"
+                                        Padding="3">
+                                        <Label Text="Amount"/>
+                                        <Label Text="{Binding Amount}"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame Padding="0"  Grid.Column="2" Grid.Row="0"  Margin="2">
+                                    <StackLayout Orientation="Vertical"
+                                        Padding="3">
+                                        <Label Text="Date of Payment"/>
+                                        <Label Text="{Binding DateofPayment}"/>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+
+    </Grid>
+</ContentPage>

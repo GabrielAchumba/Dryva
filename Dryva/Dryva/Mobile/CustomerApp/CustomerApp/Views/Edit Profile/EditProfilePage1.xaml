@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomerApp.Views.EditProfilePage1" Title="Edit Profile"  IsEnabled="{Binding IsActionCommandEnabled}">
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ScrollView>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="35"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Frame  Grid.ColumnSpan="3" Padding="0">
+                        <Image Source="background2.png"  Grid.ColumnSpan="3"  HorizontalOptions="FillAndExpand" Aspect="Fill"/>
+                    </Frame>
+                    <Frame  Grid.ColumnSpan="3" Padding="0" CornerRadius="50" IsClippedToBounds="True" HorizontalOptions="Center"
+                             WidthRequest="100" HeightRequest="100">
+                        <Image x:Name="imgPix"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                    </Frame>
+                   
+                    <StackLayout Grid.Column="0" Grid.Row="2" Orientation="Vertical">
+                        <Label Text="First Name" />
+                        <Entry Text="{Binding FirstName}" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="2" Grid.Row="2" Orientation="Vertical">
+                        <Label Text="Last Name" />
+                        <Entry Text="{Binding LastName}" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" Orientation="Vertical">
+                        <Label Text="Email" />
+                        <Entry Text="{Binding Email}" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" Orientation="Vertical">
+                        <Label Text="Mobile" />
+                        <Entry Text="{Binding PhoneNumber}" Keyboard="Numeric" Placeholder="07030000000"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+            <Button  Text="Next" Grid.Row="1"  VerticalOptions="EndAndExpand" Command="{Binding NextCommand}" HorizontalOptions="Fill" Style="{StaticResource DButtonStyle}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

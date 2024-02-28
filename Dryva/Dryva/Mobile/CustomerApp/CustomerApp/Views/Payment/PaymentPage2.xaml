@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Add Payment"
+             x:Class="CustomerApp.Views.PaymentPage2">
+    <ContentPage.Content>
+        <Grid  Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="mastercard.png" Opacity=".5"  HorizontalOptions="Center"  HeightRequest="100" WidthRequest="100" />
+
+                    <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="1"
+                         Orientation="Vertical">
+                        <Label Text="Debit Card Number" />
+                        <Entry Text="{Binding Model.MasterCardNumber}"  Keyboard="Numeric"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="2"
+                          Orientation="Vertical">
+                        <Label Text="Card Holder" />
+                        <Entry Text="{Binding Model.CardHolder}" />
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand"  Orientation="Horizontal" Grid.Column="0" Grid.Row="3">
+                        <StackLayout HorizontalOptions="FillAndExpand"  Orientation="Vertical">
+                            <Label Text="Expires" />
+                            <DatePicker Date="{Binding Model.ExpiryDate}" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                            <Label Text="CVC"/>
+                            <Entry Text="{Binding Model.CVC}" Keyboard="Numeric"/>
+                        </StackLayout>
+                    </StackLayout>                                 
+                   
+                    <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="5"
+                     Orientation="Vertical">
+                        <Label Text="Recharge Amount" />
+                        <Entry Text="{Binding Model.Amount}" IsReadOnly="True" Keyboard="Numeric" />
+                    </StackLayout>
+
+                </Grid>
+            </ScrollView>
+
+            <Button Grid.Row="1"  VerticalOptions="EndAndExpand" Command="{Binding SubmitCommand}" Text="Submit" HorizontalOptions="Fill" Style="{StaticResource DButtonStyle}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

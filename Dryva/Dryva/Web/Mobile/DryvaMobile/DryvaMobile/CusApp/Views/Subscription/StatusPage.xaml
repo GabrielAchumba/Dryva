@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CusApp.Views.StatusPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="0" Grid.Column="0" Margin="2" HorizontalOptions="FillAndExpand">
+            <StackLayout Padding="3,3,3,3" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Image Source="{Binding PictureSource}" Margin="5"/>
+                <Label Text="{Binding FirstNameStatus}" FontSize="Small" Margin="5"/>
+                <Label BackgroundColor="{Binding Statusolor}" HorizontalOptions="End" Margin="2"/>
+            </StackLayout>
+        </Frame>
+
+        <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+            <Label Text="Credit Balance" FontSize="Small"/>
+            <Label Text="{Binding CreditBalance}" FontSize="Small"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="4" Grid.Column="0" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+            <Label Text="Number of Trips Balance" FontSize="Small"/>
+            <Label Text="{Binding TripsBalance}" FontSize="Small"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="6" Grid.Column="0" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+            <Label Text="Subscription Expiry" FontSize="Small"/>
+            <Label Text="{Binding SubscriptionExpiry}" FontSize="Small"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

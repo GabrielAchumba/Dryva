@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomerApp.Views.RegistrationPage4" Title="Update Phone Number">
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            
+            <Image Source="phoneimage2.png" HorizontalOptions="Center" Margin="30"/>
+
+            <Label Text="{Binding Information1}" Grid.Row="1" Grid.Column="0"
+               HorizontalOptions="CenterAndExpand" Margin="10"/>
+
+            <StackLayout  Grid.Row="2" Grid.ColumnSpan="3" Orientation="Vertical">
+                <Label Text="Mobile" />
+                <Entry Text="{Binding PhoneNumber}" Keyboard="Numeric" Placeholder="07030000000"/>
+            </StackLayout>
+
+            <Button Grid.Row="3" Grid.ColumnSpan="3" Command="{Binding ChangePhoneNumberCommand}" Text="Save And Verify" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Style="{StaticResource DButtonStyle}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

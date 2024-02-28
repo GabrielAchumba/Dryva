@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomerApp.Views.LogoutPage">
+    <ContentPage.Content>
+        <Grid Margin="10" VerticalOptions="CenterAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Text="Confirm logging out" FontSize="Medium" Margin="0,10" HorizontalOptions="Center"/>
+
+            <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="End" >
+                <Button Command="{Binding LogoutCommand}" Text="Yes" Style="{StaticResource DButtonStyle}"/>
+                <Button Command="{Binding CancelCommand}" Text="No" Style="{StaticResource DButtonStyle}" BackgroundColor="{DynamicResource Dryva-Red}"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

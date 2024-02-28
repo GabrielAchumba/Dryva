@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:CusApp.Views"
+             xmlns:models="clr-namespace:CusApp.Models"
+             mc:Ignorable="d"
+			 x:Class="CusApp.Views.MasterPage"
+			 Padding="0,20,0,0"
+			 IconImageSource="dashboard5.png"
+			 Title="Personal Organiser">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Vertical" Grid.Row="0" BackgroundColor="Orange">
+
+            
+            <Image Source="{Binding Dashboard1}" 
+                       WidthRequest="50" HeightRequest="50"/>
+            <Label Text="{Binding FullName}" FontSize="Small"  BackgroundColor="Orange" TextColor="White"/>
+            <Button BorderWidth="0" Text="Edit profile" FontSize="Micro"
+                    Command="{Binding EditprofileCommand}" BackgroundColor="Orange"
+                    TextColor="White"/>
+        </StackLayout>
+
+
+        <StackLayout Grid.Row="1">
+            <ListView x:Name="listView" x:FieldModifier="public">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type models:MasterPageItem}">
+                        <models:MasterPageItem Title="Home Page" IconSource="dashboard2.png" TargetType="{x:Type views:NVehicleView}" />
+                        <models:MasterPageItem Title="Subscription" IconSource="dashboard2.png" TargetType="{x:Type views:SubscriptionPage}" />
+                        <models:MasterPageItem Title="Payment" IconSource="dashboard3.png" TargetType="{x:Type views:PaymentPage}" />
+                        <models:MasterPageItem Title="History" IconSource="dashboard4.png" TargetType="{x:Type views:PaymentPage}" />
+                        <models:MasterPageItem Title="Notifications" IconSource="dashboard4.png" TargetType="{x:Type views:PaymentPage}" />
+                        <models:MasterPageItem Title="Settings" IconSource="dashboard4.png" TargetType="{x:Type views:PaymentPage}" />
+                        <models:MasterPageItem Title="Help" IconSource="dashboard4.png" TargetType="{x:Type views:PaymentPage}" />
+                        <models:MasterPageItem Title="Logout" IconSource="dashboard4.png" TargetType="{x:Type views:PaymentPage}" />
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="5,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding IconSource}" WidthRequest="70" HeightRequest="70"
+                                       Grid.Column="0" Grid.Row="0"/>
+                                <Label Grid.Column="1" Grid.Row="0" Text="{Binding Title}" FontSize="Small"
+                                       HeightRequest="100"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+    </Grid>
+
+   
+</ContentPage>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CusApp.Views.ShareUnitsView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Frame Padding="0"  Grid.Column="0" Grid.Row="0"  Margin="2">
+            <StackLayout Orientation="Vertical"
+                                        Padding="10" HorizontalOptions="FillAndExpand">
+                <Picker Title="Select number of persons" ItemsSource="{Binding NumberOfPersonsList}" 
+                        SelectedItem="{Binding NumberOfPersons, Mode=TwoWay}"
+                    HorizontalOptions="FillAndExpand"
+                Margin="1"/>
+
+            </StackLayout>
+        </Frame>
+
+        <ScrollView Grid.Row="1" Grid.Column="0">
+            <StackLayout BindableLayout.ItemsSource="{Binding ShareUnitDTOList}"
+                         Grid.Row="1" HorizontalOptions="FillAndExpand" 
+                         IsVisible="{Binding StackLayoutVisibility}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Frame Padding="0"  Grid.Column="0" Grid.Row="0"  Margin="2">
+                                    <StackLayout Orientation="Vertical"
+                                        Padding="3">
+                                        <Label Text="Trips"/>
+                                        <Entry Text="{Binding Trips}" HorizontalOptions="FillAndExpand"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame Padding="0"  Grid.Column="1" Grid.Row="0"  Margin="2">
+                                    <StackLayout Orientation="Vertical"
+                                        Padding="3">
+                                        <Label Text="Card Serial Number"/>
+                                        <Entry Text="{Binding Csn}" HorizontalOptions="FillAndExpand"/>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+
+        <Button BackgroundColor="#C1802A" TextColor="White"
+                         Grid.Column="0" Grid.Row="2" Margin="2" WidthRequest="150"
+                HeightRequest="40"
+                Command="{Binding ShareUnitsCommand}"
+                                Text="Share Units" FontSize="Small" HorizontalOptions="Center"/>
+    </Grid>
+    
+</ContentPage>

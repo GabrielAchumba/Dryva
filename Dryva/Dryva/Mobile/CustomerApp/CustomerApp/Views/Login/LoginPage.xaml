@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomerApp.Views.LoginPage" Title="Login"  IsEnabled="{Binding IsActionCommandEnabled}">
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Label Text="Phone Number" Grid.Row="1"/>
+            <Entry Grid.Row="2" Text="{Binding Model.PhoneNumber}" Keyboard="Numeric"/>
+
+            <Label  Grid.Row="3" Text="Password"/>
+            <Entry Grid.Row="4" IsPassword="True" Text="{Binding Model.Password}"  />
+            <ActivityIndicator Grid.Row="0" Grid.RowSpan="5"  HorizontalOptions="Center" IsVisible="{Binding IndicatorIsVisibled}" IsRunning="{Binding IndicatorIsRunning}" Color="{DynamicResource Dryva-Green}"/>
+
+            <Grid Grid.Row="6"  HorizontalOptions="FillAndExpand"  VerticalOptions="EndAndExpand" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Button Grid.ColumnSpan="2" Text="Login" Command="{Binding  LoginCommand}" HorizontalOptions="FillAndExpand" Style="{StaticResource DButtonStyle}"/>
+
+                <StackLayout Grid.Row="1" Orientation="Horizontal"  HorizontalOptions="Start">
+                    <Switch  IsToggled="{Binding Model.RememberMe}" OnColor="{DynamicResource Dryva-Green}" ThumbColor="{DynamicResource Dryva-NavBar}"  VerticalOptions="Center" />
+                    <Label Text="Remember me"  VerticalOptions="Center" />
+                </StackLayout>
+                <Label  Grid.Row="1" Grid.Column="1"  Text="Forgot password"  HorizontalOptions="End" VerticalOptions="Center" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ForgotPasswordClick" NumberOfTapsRequired="1"  />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

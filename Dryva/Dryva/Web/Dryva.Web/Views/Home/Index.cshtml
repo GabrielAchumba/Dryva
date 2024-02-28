@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_MapLayout.cshtml";
+}
+
+<div id="map"></div>
+
+@section Scripts {
+
+<script>
+    
+    $(document).on('keydown', 'input#search', function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13') {
+            var parameter = $(this).val();
+
+            if (parameter.length > 0) {
+                if (parameter.charAt(0) === "@@") {
+                    // perform google search by address
+                    parameter = parameter.substring(1);
+                } else {
+                    // perform marker search
+                }
+            alert('You pressed a "enter" key: val="' + parameter + '"');
+            } else {
+                alert('Please enter a search query.');
+            }
+            //alert('You pressed a "enter" key: val="' + $(this).val() + '"');
+        }
+    });
+
+</script>
+
+<script>
+    function initMap() {
+        var options = {
+            zoom: 15,
+            center: { lat: 5.3, lng: 7.9 },
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                position: google.maps.ControlPosition.TOP_CENTER
+            }
+        };
+
+        var iconBase = 'http://maps.google.com/mapfiles/kml/shapes/';
+        // var iconBase = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/';
+        var icons = {
+            parking: {
+                icon: iconBase + 'parking_lot_maps.png'
+            },
+            library: {
+                icon: iconBase + 'library_maps.png'
+            },
+            info: {
+                icon: iconBase + 'info-i_maps.png'
+            },
+            bus: {
+                icon: {
+                    url: iconBase + 'bus.png',
+                    scaledSize: new google.maps.Size(24, 24)
+                }
+            }
+        };
+
+        var map = new google.maps.Map(document.getElementById('map'), options);
+        var $input = $('<input type="text" id="search" class="form-control map-search" autocomplete="off" />');
+        $('#map').append($input);
+
+        map.controls[google.maps.ControlPosition.TOP_CENTER].push($input.get(0));
+
+        coords.forEach(coord => addMarker(coord));
+
+        function addMarker(coord) {
+            var marker = new google.maps.Marker({
+                position: { lat: coord.lat, lng: coord.lng },
+                map: map,
+                icon: icons['bus'].icon
+            });
+
+            var info = new google.maps.InfoWindow({
+                content: '<a class="font-weight-bold" href="#" target="_blank">' + coord.title + '</a>'
+            });
+
+            marker.addListener('click', function () {
+                info.open(map, marker);
+            });
+            nmarkers.push({ id: coord.id, title: coord.title, marker: marker });
+        }
+
+        google.maps.event.addListener(map, 'click', function (event) {
+            map.panTo(event.latLng);
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAma3zXa5jkgGRfBRtpPbFVyscT6pXE5KI&callback=initMap">
+</script>
+
+}

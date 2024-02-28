@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomerApp.Views.EditProfilePage2" Title="Edit Profile"  IsEnabled="{Binding IsActionCommandEnabled}" >
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Text="Profile" Grid.Row="0" Grid.Column="1"  HorizontalOptions="Center"/>
+            <Frame Grid.Column="1" Grid.Row="1"  WidthRequest="300" HeightRequest="300">
+                <Image x:Name="imgPix" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            </Frame>
+            <ActivityIndicator Grid.Row="1" Grid.Column="1"  HorizontalOptions="Center" IsVisible="{Binding IndicatorIsVisibled}" IsRunning="{Binding IndicatorIsRunning}" Color="{DynamicResource Dryva-Green}"/>
+
+            <Button Text="Upload" IsEnabled="{Binding IsActionCommandEnabled}"   Grid.Column="1" Grid.Row="2"  HorizontalOptions="FillAndExpand"
+                     Clicked="UploadPix_Click"   Style="{StaticResource DButtonStyle}" BackgroundColor="{DynamicResource Dryva-NavBar}"/>
+
+
+
+            <Button  Text="Submit" Grid.Row="2" Grid.ColumnSpan="3"  VerticalOptions="EndAndExpand" Command="{Binding SubmitCommand}" HorizontalOptions="Fill" Style="{StaticResource DButtonStyle}"/>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

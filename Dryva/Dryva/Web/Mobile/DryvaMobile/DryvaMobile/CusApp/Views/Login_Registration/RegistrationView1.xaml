@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:CusApp.Controls"
+             mc:Ignorable="d"
+             x:Class="CusApp.Views.RegistrationView1">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Column="0" Grid.Row="1" Margin="3" Orientation="Vertical">
+            <Label Text="TITLE" FontSize="Small"/>
+            <Entry Text="{Binding TITLE}" FontSize="Small"/>
+        </StackLayout>
+        <StackLayout Grid.Column="0" Grid.Row="2" Margin="3" Orientation="Vertical">
+            <Label Text="FIRST NAME" FontSize="Small"/>
+            <Entry Text="{Binding FIRSTNAME}" FontSize="Small"/>
+        </StackLayout>
+        <StackLayout Grid.Column="2" Grid.Row="2" Margin="3" Orientation="Vertical">
+            <Label Text="LAST NAME" FontSize="Small"/>
+            <Entry Text="{Binding LASTNAME}" FontSize="Small"/>
+        </StackLayout>
+        <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" Margin="3" Orientation="Vertical">
+            <Label Text="EMAIL" FontSize="Small"/>
+            <Entry Text="{Binding EMAIL}" FontSize="Small"/>
+        </StackLayout>
+
+        <StackLayout Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="3" Margin="3" Orientation="Horizontal">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="MOBILE" Grid.Row="0" Grid.Column="0"/>
+                <controls:Dropdown ItemsSource="{Binding MOBILECODELIST}" SelectedIndex="{Binding SelectedMOBILECODEIndex}"
+                                   Grid.Row="1" Grid.Column="0"/>
+                <Entry Text="{Binding MOBILENUMBER}"  Grid.Row="1" Grid.Column="2"
+                      Placeholder="07030000000" HorizontalOptions="Fill"/>
+            </Grid>
+
+        </StackLayout>
+
+        <StackLayout Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="3" Margin="3" Orientation="Vertical">
+            <Label Text="PASSWORD" FontSize="Small"/>
+            <Entry Text="{Binding PASSWORD}" FontSize="Small" IsPassword="True"/>
+        </StackLayout>
+    </Grid>
+</ContentView>

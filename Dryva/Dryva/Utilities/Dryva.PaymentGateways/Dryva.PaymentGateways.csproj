@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>1.0.0.0</Version>
+    <Authors>Eniefiok Eniang</Authors>
+    <Company>Dryva Service Transport System Nig. Ltd.</Company>
+    <Product>Payment Gateways Manager</Product>
+    <Description>A wrapper around popular Payment Gateways (PayStack, Rave etc.).</Description>
+    <Copyright>Copyright (c) 2019 Dryva Service Transport System Nig. Ltd.</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+</Project>

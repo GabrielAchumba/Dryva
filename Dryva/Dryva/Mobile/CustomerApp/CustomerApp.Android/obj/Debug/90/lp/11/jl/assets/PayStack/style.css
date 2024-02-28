@@ -1,0 +1,44 @@
+﻿
+.newsletter-subscribe {
+    color: #313437;
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+    .newsletter-subscribe form {
+        justify-content: center;
+    }
+
+    .newsletter-subscribe h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        padding-top: 0;
+        margin-top: 0;
+        color: inherit;
+    }
+
+    .newsletter-subscribe p {
+        color: #7d8285;
+        line-height: 1.5;
+    }
+
+    .newsletter-subscribe .intro {
+        font-size: 16px;
+        max-width: 500px;
+        margin: 0 auto 10px;
+    }
+
+        .newsletter-subscribe .intro p {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+.details {
+    margin-bottom: 20px;
+}
+
+    .details .row > .col:first-child {
+        text-align: right;
+    }

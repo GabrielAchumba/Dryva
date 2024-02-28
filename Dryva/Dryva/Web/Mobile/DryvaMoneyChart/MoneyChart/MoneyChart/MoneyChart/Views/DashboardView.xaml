@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="DASHBOARD"
+             x:Class="MoneyChart.Views.DashboardView">
+
+    <ScrollView>
+        <StackLayout Padding="10" Spacing="10">
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" Padding="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="customers.png" Grid.Column="0" Grid.Row="0"
+                                   WidthRequest="100" HeightRequest="100"/>
+                        <StackLayout Orientation="Vertical"
+                                         Grid.Column="1" Grid.Row="0" Padding="10">
+                            <Label Text="{Binding CustomersSummaryReport}"
+                                       HorizontalTextAlignment="Start"
+                                       FontSize="Small"
+                                       TextColor="Black"/>
+                            <BoxView Color="Gray"
+                                    HorizontalOptions="Fill"
+                                    HeightRequest="1"/>
+                            <Button BackgroundColor="#C1802A" TextColor="White"
+                                        BorderRadius="30" Command="{Binding CustomersReportCommand}"
+                                Text="Customers Report" FontSize="Small"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="1" Padding="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="subscribers.png" Grid.Column="0" Grid.Row="0"
+                                   WidthRequest="100" HeightRequest="100"/>
+                        <StackLayout Orientation="Vertical"
+                                         Grid.Column="1" Grid.Row="0" Padding="10">
+                            <Label Text="{Binding SubscribersSummaryReport}"
+                                       HorizontalTextAlignment="Start"
+                                       FontSize="Small"
+                                       TextColor="Black"/>
+                            <BoxView Color="Gray"
+                                    HorizontalOptions="Fill"
+                                    HeightRequest="1"/>
+                            <Button BackgroundColor="#C1802A" TextColor="White"
+                                        BorderRadius="30" Command="{Binding SubscribersReportCommand}"
+                                Text="Subscribers Report" FontSize="Small"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame Grid.Row="2" Padding="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="profit.png" Grid.Column="0" Grid.Row="0"
+                                   WidthRequest="100" HeightRequest="100"/>
+                        <StackLayout Orientation="Vertical"
+                                         Grid.Column="1" Grid.Row="0" Padding="10">
+                            <Label Text="{Binding ProfitSummaryReport}"
+                                       HorizontalTextAlignment="Start"
+                                       FontSize="Small"
+                                       TextColor="Black"/>
+                            <BoxView Color="Gray"
+                                    HorizontalOptions="Fill"
+                                    HeightRequest="1"/>
+                            <Button BackgroundColor="#C1802A" TextColor="White"
+                                        BorderRadius="30" Command="{Binding ProfitReportCommand}"
+                                Text="Profit Report" FontSize="Small"/>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

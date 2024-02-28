@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>TestWebViewPG.Android</name>
+  </assembly>
+  <members>
+    <member name="" />
+    <member name="N:TestWebViewPG.Droid" />
+    <member name="M:TestWebViewPG.Droid.MainActivity.OnCreate(Bundle)" />
+  </members>
+</doc>

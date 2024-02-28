@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Investor Profit Records"
+             x:Class="MoneyChart.Views.InvestorProfitView">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+              <RowDefinition Height="auto"/>
+              <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+            <Frame Padding="0"  Grid.Column="0" Grid.Row="0" Margin="5">
+            <StackLayout Orientation="Horizontal"
+                                        Padding="3">
+                <Label Text="Capital Expenses: " FontSize="Large"/>
+                <Label Text="{Binding InvestorProfitList.Capex}" FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+        <Frame Padding="0"  Grid.Column="0" Grid.Row="1" Margin="5">
+            <StackLayout Orientation="Horizontal"
+                                        Padding="3">
+                <Label Text="Operational Expenses: " FontSize="Large"/>
+                <Label Text="{Binding InvestorProfitList.Opex}" FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+        <Frame Padding="0"  Grid.Column="0" Grid.Row="2" Margin="5">
+            <StackLayout Orientation="Horizontal"
+                                        Padding="3">
+                <Label Text="Retained Profit (%): " FontSize="Large"/>
+                <Label Text="{Binding InvestorProfitList.PercentageRetainedProfit}" FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+        <Frame Padding="0"  Grid.Column="0" Grid.Row="3" Margin="5">
+            <StackLayout Orientation="Horizontal"
+                                        Padding="3">
+                <Label Text="Dividend: " FontSize="Large"/>
+                <Label Text="{Binding InvestorProfitList.Dividend}" FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+        
+        <Frame Padding="0"  Grid.Column="0" Grid.Row="4" Margin="5">
+            <StackLayout Orientation="Horizontal"
+                                        Padding="3">
+                <Label Text="Investor Shares (%): " FontSize="Large"/>
+                <Label Text="{Binding InvestorProfitList.Percentage}" FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+
+
+        <Frame Padding="0"  Grid.Column="0" Grid.Row="5" Margin="5">
+            <StackLayout Orientation="Horizontal"
+                                        Padding="3">
+                <Label Text="Current ROI (NGN): " FontSize="Large"/>
+                <Label Text="{Binding InvestorProfitList.CurrentROI}" FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Padding="0"  Grid.Column="0" Grid.Row="6" Margin="5">
+            <StackLayout Orientation="Horizontal"
+                                        Padding="3">
+                <Label Text="Cumulative ROI (NGN): " FontSize="Large"/>
+                <Label Text="{Binding InvestorProfitList.CumulativeROI}" FontSize="Large"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+
+</ContentPage>

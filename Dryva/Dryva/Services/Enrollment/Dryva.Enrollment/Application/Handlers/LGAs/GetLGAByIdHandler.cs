@@ -1,0 +1,32 @@
+﻿using AutoMapper;
+using Dryva.Enrollment.Application.Queries;
+using Dryva.Enrollment.DTOs.Lga;
+using Dryva.Enrollment.Repositories.Queries;
+using MediatR;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace Dryva.Enrollment.Application.Handlers
+{
+    public class GetLGAByIdHandler : IRequestHandler<GetLGAByIdQuery, LGADTO>
+    {
+        private readonly ILGAQueryRepository _repository;
+        private readonly ILogger<GetLGAByIdHandler> _logger;
+      
+        public GetLGAByIdHandler(ILGAQueryRepository repository, ILogger<GetLGAByIdHandler> logger)
+        {
+            _repository = repository;
+            _logger = logger;
+        }
+
+        public async Task<LGADTO> Handle(GetLGAByIdQuery request, CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("Called into GetLGAById handler");
+            return await _repository.GetById(request.Id);
+        }
+    }
+}

@@ -1,0 +1,4 @@
+values/strings.xml;values/strings.xml
+layout/paystack_activity.xml;layout/paystack_activity.xml
+values/styles.xml;values/styles.xml
+values/colors.xml;values/colors.xml

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="WhiteSmoke"
+             x:Class="CusApp.Views.LogInView1">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Vertical" Margin="10" Grid.Row="0" Grid.Column="0">
+            <Label Text="PHONE NUMBER OR EMAIL" FontSize="Micro"/>
+            <Entry Text="{Binding PHONENUMBEROREMAIL}" FontSize="Small"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" Margin="10" Grid.Row="1" Grid.Column="0">
+            <Label Text="PASSWORD" FontSize="Micro"/>
+            <Entry Text="{Binding PASSWORD}" IsPassword="True" FontSize="Small"/>
+        </StackLayout>
+    </Grid>
+</ContentView>

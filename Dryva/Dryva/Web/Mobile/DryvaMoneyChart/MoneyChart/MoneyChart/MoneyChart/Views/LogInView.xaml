@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Log In"
+             x:Class="MoneyChart.Views.LogInView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <Image Source="password.png" WidthRequest="50" HeightRequest="50"/>
+            <Entry Text="{Binding PinCode}" Placeholder="Enter Pin" HorizontalOptions="FillAndExpand"
+                 IsPassword="true"  />
+        </StackLayout>
+        <Button BackgroundColor="DarkBlue" TextColor="White" Grid.Row="2" Grid.Column="0"
+                                        BorderRadius="30" Command="{Binding LogInCommand}"
+                                Text="Login" FontSize="Small"/>
+        <StackLayout Grid.Row="3" Grid.Column="0" Orientation="Horizontal">
+            <Label Text="{Binding LoginStatuts}" HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center" FontSize="Body" Margin="10"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

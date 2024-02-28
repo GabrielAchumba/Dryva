@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="WhiteSmoke"
+             x:Class="CusApp.Views.RegistrationView3">
+
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="phoneimage.png" WidthRequest="50" HeightRequest="50"
+               HorizontalOptions="Center" VerticalOptions="Center"
+               Grid.Row="0" Grid.Column="0" Margin="30"/>
+
+        <Label Text="{Binding Information1}" FontSize="Small"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0" Margin="10"/>
+
+        <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="0" Margin="10">
+            <Label Text="ENTER OTP" FontSize="Micro"/>
+            <Entry Text="{Binding OTPCODE}" FontSize="Small"/>
+        </StackLayout>
+    </Grid>
+    
+</ContentView>

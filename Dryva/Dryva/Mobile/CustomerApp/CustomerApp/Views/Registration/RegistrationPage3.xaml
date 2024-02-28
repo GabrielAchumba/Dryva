@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomerApp.Views.RegistrationPage3" Title="Verify Mobile"  IsEnabled="{Binding IsActionCommandEnabled}">
+    <ContentPage.Content>
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="phoneimage.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="Center"
+               Margin="30"/>
+
+            <Label Text="{Binding Model3.Message}" 
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Center" Grid.Row="1" Grid.Column="0" Margin="20"/>
+
+            <StackLayout Orientation="Vertical" Grid.Row="2" Grid.Column="0">
+                <Label Text="Enter OTP" />
+                <Entry Text="{Binding Model3.OTP}" Keyboard="Numeric"/>
+            </StackLayout>
+            <Label Grid.Row="3" Text="{Binding ResendingOTPText}" TextColor="Black" HorizontalOptions="Center"/>
+            
+            <ActivityIndicator   Grid.Row="2" Grid.RowSpan="2"  IsVisible="{Binding IndicatorIsVisibled}" IsRunning="{Binding IndicatorIsRunning}" Color="{DynamicResource Dryva-Green}"/>
+
+            <Grid Grid.Row="6"  HorizontalOptions="FillAndExpand"  VerticalOptions="EndAndExpand" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.ColumnSpan="2" VerticalOptions="EndAndExpand"  Command="{Binding SubmitCommand}" Text="Submit" HorizontalOptions="FillAndExpand" Style="{StaticResource DButtonStyle}"/>
+                <Label  Grid.Row="1" Grid.Column="0"  Text="Change Number"  HorizontalOptions="Start"  >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ChangePhoneNumberClick"  NumberOfTapsRequired="1"  />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label  Grid.Row="1" Grid.Column="1"  Text="Resend Code"  HorizontalOptions="End"  >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ResendOTPClick"  NumberOfTapsRequired="1"  />
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

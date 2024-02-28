@@ -1,0 +1,18 @@
+﻿using Dryva.Enrollment.DTOs.State;
+using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Dryva.Enrollment.Application.Queries
+{
+    public class GetStateByIdQuery : IRequest<StateDTO>
+    {
+        public Guid Id { get;  }
+        public GetStateByIdQuery(Guid id)
+        {
+            Id = id;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="WhiteSmoke"
+             x:Class="CusApp.Views.PaymentView2">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="0"
+                     Margin="10" Orientation="Vertical" IsVisible="{Binding IsDebitCardViewVisible}">
+            <Label Text="DEBIT CARD NUMBER" FontSize="Micro"/>
+            <Entry Text="{Binding DEBITCARDNUMBER}" FontSize="Small"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="1"
+                     Margin="10" Orientation="Vertical" IsVisible="{Binding IsDebitCardViewVisible}">
+            <Label Text="CARD HOLDER" FontSize="Micro"/>
+            <Entry Text="{Binding CARDHOLDER}" FontSize="Small"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="2"
+                     Margin="10" Orientation="Vertical" IsVisible="{Binding IsDebitCardViewVisible}">
+            <Label Text="EXPIRES" FontSize="Micro"/>
+            <DatePicker Date="{Binding EXPIRYDATE}" FontSize="Small"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="3"
+                     Margin="10" Orientation="Vertical" IsVisible="{Binding IsDebitCardViewVisible}">
+            <Label Text="CVS" FontSize="Micro"/>
+            <Entry Text="{Binding CVS}" FontSize="Small"/>
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="0"
+                     Margin="10" Orientation="Vertical" IsVisible="{Binding IsBankDraftViewVisible}">
+            <Label Text="BANK NAME" FontSize="Micro"/>
+            <Entry Text="{Binding DEBITCARDNUMBER}" FontSize="Small"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="1"
+                     Margin="10" Orientation="Vertical" IsVisible="{Binding IsBankDraftViewVisible}">
+            <Label Text="ACCOUNT NUMBER" FontSize="Micro"/>
+            <Entry Text="{Binding ACCOUNTNUMBER}" FontSize="Small"/>
+        </StackLayout>
+    </Grid>
+    
+</ContentView>

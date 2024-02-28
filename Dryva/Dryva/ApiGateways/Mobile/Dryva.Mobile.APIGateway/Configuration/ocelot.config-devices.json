@@ -1,0 +1,66 @@
+{
+  "ReRoutes": [
+    //Devices Service
+    {
+      "DownstreamPathTemplate": "/api/Devices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7877
+        }
+      ],
+      "UpstreamPathTemplate": "/Devices",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Devices/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7877
+        }
+      ],
+      "UpstreamPathTemplate": "/Devices/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+    //Routes
+    {
+      "DownstreamPathTemplate": "/api/Routes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7877
+        }
+      ],
+      "UpstreamPathTemplate": "/Routes",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Routes/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7877
+        }
+      ],
+      "UpstreamPathTemplate": "/Routes/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    }
+  ]
+}

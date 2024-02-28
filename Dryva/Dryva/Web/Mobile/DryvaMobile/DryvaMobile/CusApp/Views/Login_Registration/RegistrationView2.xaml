@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="WhiteSmoke"
+             x:Class="CusApp.Views.RegistrationView2">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="3"/>
+        </Grid.RowDefinitions>
+        
+        <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand">
+            <Label Text="STATE" FontSize="Micro"/>
+            <Entry Text="{Binding STATE}" FontSize="Small"/>
+        </StackLayout>
+        
+        <StackLayout Grid.Row="1" Grid.Column="3" HorizontalOptions="FillAndExpand">
+            <Label Text="CITY" FontSize="Micro"/>
+            <Entry Text="{Binding CITY}" FontSize="Small"/>
+        </StackLayout>
+        
+        <StackLayout Grid.Row="3" Grid.Column="1" HorizontalOptions="FillAndExpand">
+            <Label Text="BIRTH DATE" FontSize="Micro"/>
+            <DatePicker Date="{Binding BIRTHDATE}" FontSize="Small"/>
+        </StackLayout>
+
+        <ScrollView Grid.Row="5" Grid.Column="1"  Grid.ColumnSpan="3">
+            <StackLayout Grid.Row="5" Grid.Column="1"  Grid.ColumnSpan="3" HorizontalOptions="FillAndExpand">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="PROFILE" Grid.Row="0" Grid.Column="0" FontSize="Micro"/>
+                    <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
+                        <Image x:Name="selectedImage"  
+                       WidthRequest="150" HeightRequest="150"/>
+                    </Frame>
+                    
+                    <Button Text="UPLOAD" BackgroundColor="Orange" TextColor="Black" FontSize="Small" 
+                        Grid.Column="2" Grid.Row="2" Clicked="Handle_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+        
+       
+    </Grid>
+
+</ContentView>

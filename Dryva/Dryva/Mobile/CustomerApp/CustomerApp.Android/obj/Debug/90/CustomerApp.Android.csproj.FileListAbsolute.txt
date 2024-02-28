@@ -1,0 +1,4 @@
+C:\Users\Gabriel Achumba\Documents\Dryva_Feb_12_2020\Dryva\Dryva\Mobile\CustomerApp\CustomerApp.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Users\Gabriel Achumba\Documents\Dryva_Feb_12_2020\Dryva\Dryva\Mobile\CustomerApp\CustomerApp.Android\obj\Debug\90\build.props
+C:\Users\Gabriel Achumba\Documents\Dryva_Feb_12_2020\Dryva\Dryva\Mobile\CustomerApp\CustomerApp.Android\obj\Debug\90\adb.props
+C:\Users\Gabriel Achumba\Documents\Dryva_Feb_12_2020\Dryva\Dryva\Mobile\CustomerApp\CustomerApp.Android\obj\Debug\90\CustomerApp.Android.csprojAssemblyReference.cache

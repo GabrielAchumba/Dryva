@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:CusApp.Controls"
+             mc:Ignorable="d"
+             BackgroundColor="WhiteSmoke"
+             x:Class="CusApp.Views.PaymentView3">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="phoneimage2.png" Grid.Row="0" Grid.Column="0"
+               HorizontalOptions="Center" Margin="30"/>
+        <Label Text="{Binding Information1}" Grid.Row="1" Grid.Column="0"
+               HorizontalOptions="CenterAndExpand" Margin="10"
+               VerticalOptions="CenterAndExpand"/>
+
+        <StackLayout Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="3" Margin="3" Orientation="Horizontal">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="2"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="MOBILE" Grid.Row="0" Grid.Column="0" FontSize="Micro"/>
+                <controls:Dropdown ItemsSource="{Binding MOBILECODELIST}" SelectedIndex="{Binding SelectedMOBILECODEIndex}"
+                                   Grid.Row="1" Grid.Column="0"/>
+                <Entry Text="{Binding MOBILENUMBER}"  Grid.Row="1" Grid.Column="2"
+                      Placeholder="07030000000" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </Grid>
+
+        </StackLayout>
+    </Grid>
+    
+</ContentView>

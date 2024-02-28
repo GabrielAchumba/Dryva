@@ -1,0 +1,35 @@
+{
+  "ReRoutes": [
+    //Map Service
+    {
+      "DownstreamPathTemplate": "/api/maps",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7882
+        }
+      ],
+      "UpstreamPathTemplate": "/maps",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/maps/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7882
+        }
+      ],
+      "UpstreamPathTemplate": "/maps/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    }
+  ]
+}

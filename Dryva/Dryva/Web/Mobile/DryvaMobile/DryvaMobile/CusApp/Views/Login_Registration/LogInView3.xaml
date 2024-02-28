@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="WhiteSmoke"
+             x:Class="CusApp.Views.LogInView3">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="login2.png" Grid.Column="0" Grid.Row="0" Margin="5"
+               HeightRequest="50" WidthRequest="50"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <StackLayout Orientation="Vertical" Margin="10" Grid.Row="1" Grid.Column="0"  HorizontalOptions="FillAndExpand">
+            <Label Text="{Binding Information1}" FontSize="Small"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Vertical" Margin="10" Grid.Row="2" Grid.Column="0">
+            <Label Text="ENTER OTP" FontSize="Micro"/>
+            <Entry Text="{Binding OTPCode}" FontSize="Small"/>
+        </StackLayout>
+    </Grid>
+</ContentView>

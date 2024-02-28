@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="WhiteSmoke"
+             x:Class="CusApp.Views.LoginPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="3"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="3"/>
+        </Grid.RowDefinitions>
+
+        <ContentView Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
+                     Content="{Binding DynamicView}"/>
+
+        <Button Command="{Binding DynamicCommand}" BackgroundColor="Black"
+                Text="{Binding DynamicCaption}"
+                Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
+                TextColor="White" FontSize="Small" HorizontalOptions="FillAndExpand" Margin="5"
+                VerticalOptions="Center"/>
+
+        <StackLayout Orientation="Horizontal" Margin="3" Grid.Row="3" Grid.Column="1"
+                     HorizontalOptions="Start" IsVisible="{Binding IsLeftStackLayoutVisible}">
+            <CheckBox IsChecked="{Binding IsLeftChecked}" HorizontalOptions="Center"
+                      VerticalOptions="Center"/>
+            <Label Text="{Binding LeftText}" HorizontalOptions="Center" VerticalOptions="Center"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" Margin="3" Grid.Row="3" Grid.Column="3"
+                     HorizontalOptions="End" IsVisible="{Binding IsRightStackLayoutVisible}">
+            <CheckBox IsChecked="{Binding IsRightChecked}" HorizontalOptions="Center"
+                      VerticalOptions="Center"/>
+            <Label Text="{Binding RightText}" HorizontalOptions="Center" VerticalOptions="Center"
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

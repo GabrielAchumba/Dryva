@@ -1,0 +1,35 @@
+{
+  "ReRoutes": [
+      //Subscriptions Service
+    {
+      "DownstreamPathTemplate": "/api/customers",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 58860
+        }
+      ],
+      "UpstreamPathTemplate": "/CustomerSubscription",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/customers/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 58860
+        }
+      ],
+      "UpstreamPathTemplate": "/CustomerSubscription/{everything}",
+      "UpstreamHttpMethod": [ "POST", "PUT", "DELETE", "GET" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Title="Status"
+             x:Class="CustomerApp.Views.StatusPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Frame CornerRadius="20" BorderColor="LightGray" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Frame  CornerRadius="30" Grid.RowSpan="2" Grid.Column="0" Padding="0"  Margin="5" IsClippedToBounds="True"  WidthRequest="60" HeightRequest="60">
+                    <Image x:Name="imgPix" Source="person.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </Frame>
+                <Label Text="{Binding Name}" Grid.Column="1"  Margin="5"/>
+
+                <Label Text="{Binding StatusName}" Grid.Row="1" Grid.Column="1"  VerticalOptions="Center" TextColor="{Binding StatusColor}" FontSize="Medium" />
+
+            </Grid>
+
+            <!--<StackLayout  Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Image x:Name="imgPix" Source="person.png" Margin="5" WidthRequest="50" HeightRequest="50"/>
+                <Label Text="{Binding FirstNameStatus}"  Margin="5"/>
+
+                <StackLayout Grid.Row="1" Orientation="Horizontal"  HorizontalOptions="Start">
+                    <Label Text="Active"  VerticalOptions="Center" />
+                    <Switch  IsToggled="True" OnColor="Transparent" ThumbColor="Red"   VerticalOptions="Center" />
+                </StackLayout> 
+            </StackLayout>-->
+        </Frame>
+
+        <StackLayout Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" Orientation="Vertical" Margin="10">
+            <Label Text="Credit Balance" />
+            <Label Text="{Binding CreditBalance}" FontSize="Caption"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" Orientation="Vertical" Margin="10">
+            <Label Text="Number of Trips Balance" />
+            <Label Text="{Binding TripsBalance}" FontSize="Caption"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="3" Grid.Column="0" HorizontalOptions="FillAndExpand" Orientation="Vertical" Margin="10">
+            <Label Text="Subscription Expiry" />
+            <Label Text="{Binding SubscriptionExpiry}" FontSize="Caption"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

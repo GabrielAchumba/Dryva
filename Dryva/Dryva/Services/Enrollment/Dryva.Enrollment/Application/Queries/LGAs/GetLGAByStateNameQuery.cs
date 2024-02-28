@@ -1,0 +1,18 @@
+﻿using Dryva.Enrollment.DTOs.Lga;
+using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Dryva.Enrollment.Application.Queries
+{
+    public class GetLGAByStateNameQuery : IRequest<IEnumerable<LGADTO>>
+    {
+        public string StateName { get;  }
+        public GetLGAByStateNameQuery(string stateName)
+        {
+            StateName = stateName;
+        }
+    }
+}

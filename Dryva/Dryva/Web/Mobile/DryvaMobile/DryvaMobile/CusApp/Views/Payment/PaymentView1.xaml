@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="WhiteSmoke"
+             x:Class="CusApp.Views.PaymentView1">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Grid.Column="0"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical">
+            <Label Text="ENTER PROMO CODE HERE"
+                   FontSize="Micro"/>
+            <Entry Text="{Binding PROMOCODE}"
+                   FontSize="Small"/>
+        </StackLayout>
+        <StackLayout Grid.Row="1" Grid.Column="0"
+                     Padding="5,5,5,5"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical">
+            <Label Text="SELECT PAYMENT MODE"
+                   FontSize="Small" HorizontalOptions="StartAndExpand"/>
+
+            
+
+                <ScrollView>
+                    <StackLayout >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Frame Grid.Row="0" Padding="0">
+                            <Grid BackgroundColor="{Binding DebitCardColor}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="PictureSource.png"
+                                       Grid.Column="0" Grid.Row="0"
+                                       WidthRequest="50" HeightRequest="50"
+                                       Margin="5"/>
+                                <Label Text="{Binding PayementModeName}"
+                                       FontSize="Small" Grid.Column="1"
+                                       Grid.Row="0" Margin="5"/>
+                                <Button ImageSource="{Binding DebitCardImageSource}" Grid.Column="3"
+                                       Grid.Row="0" Margin="5" Command="{Binding DebitCardCommand}"
+                                        WidthRequest="10" HeightRequest="10" HorizontalOptions="Center"
+                                        VerticalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+
+                        <Frame Grid.Row="1" Padding="0">
+                            <Grid BackgroundColor="{Binding BankDraftColor}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="PictureSource.png"
+                                       Grid.Column="0" Grid.Row="0"
+                                       WidthRequest="50" HeightRequest="50"
+                                       Margin="5"/>
+                                <Label Text="{Binding PayementModeName}"
+                                       FontSize="Small" Grid.Column="1"
+                                       Grid.Row="0" Margin="5"/>
+                                <Button ImageSource="{Binding BankDraftImageSource}" Grid.Column="3"
+                                       Grid.Row="0" Margin="5" Command="{Binding BankDraftCommand}"
+                                        WidthRequest="10" HeightRequest="10"
+                                        CornerRadius="5" HorizontalOptions="Center"
+                                        VerticalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+
+                    </Grid>
+                    </StackLayout>
+                </ScrollView>
+
+        </StackLayout>
+    </Grid>
+</ContentView>

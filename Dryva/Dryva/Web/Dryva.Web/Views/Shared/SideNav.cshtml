@@ -1,0 +1,91 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<!-- Sidebar navigation -->
+<div id="slide-out" class="side-nav fixed wide slim">
+    <ul class="custom-scrollbar">
+        <!-- Logo -->
+        <li>
+            <div class="logo-wrapper sn-ad-avatar-wrapper">
+                <a href="#">
+                    <img src="~/img/settings-icon.png" class="rounded-circle">
+                    <span>Menu</span>
+                </a>
+            </div>
+        </li>
+        <!--/. Logo -->
+        <!-- Side navigation links -->
+        <li>
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r @ViewContext.CssActive(new[] { "Devices", "Clients" })" title="Manage">
+                        <i class="sv-slim-icon fas fa-cogs mr-1"></i>
+                        Manage
+                        <i class="fas fa-chevron-down rotate-icon"></i>
+                    </a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a asp-action="Index" asp-controller="Devices" asp-route-returnUrl="@ViewBag.returnUrl" class="waves-effect">
+                                    <span class="sv-slim" title="Devices"> DVs </span>
+                                    <span class="sv-normal">Devices</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-action="Index" asp-controller="Customers" asp-route-returnUrl="@ViewBag.returnUrl" class="waves-effect">
+                                    <span class="sv-slim" title="Customers"> CUs </span>
+                                    <span class="sv-normal">Customers</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a asp-action="Index" asp-controller="Drivers" asp-route-returnUrl="@ViewBag.returnUrl" class="waves-effect">
+                                    <span class="sv-slim" title="Drivers"> DRs </span>
+                                    <span class="sv-normal">Drivers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a class="collapsible-header waves-effect arrow-r @ViewContext.CssActive(new[] { "Axes" })" title="Map">
+                        <i class="sv-slim-icon fas fa-map-marker-alt mr-1"></i>
+                        Map
+                        <i class="fas fa-chevron-down rotate-icon"></i>
+                    </a>
+                    <div class="collapsible-body">
+                        <ul>
+                            <li>
+                                <a asp-action="Index" asp-controller="Axes" asp-route-returnUrl="@ViewBag.returnUrl" class="waves-effect">
+                                    <span class="sv-slim" title="Map Axes"> MXs </span>
+                                    <span class="sv-normal">Map Axes</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a id="toggle" class="waves-effect">
+                        <i class="sv-slim-icon fas fa-angle-double-left mr-1"></i>
+                        Minimize Menu
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!--/. Side navigation links -->
+    </ul>
+    <div class="sidenav-bg rgba-mdb-color-strong"></div>
+</div>
+<!--/. Sidebar navigation -->
+
+<script capture="SideNavScript">
+    $(document).ready(function () {
+        // SideNav Button Initialization
+        $(".button-collapse").sideNav({
+            MENU_WIDTH: 240
+        });
+        // SideNav Scrollbar Initialization
+        var sideNavScrollbar = document.querySelector('.custom-scrollbar');
+        var ps = new PerfectScrollbar(sideNavScrollbar);
+    });
+</script>
