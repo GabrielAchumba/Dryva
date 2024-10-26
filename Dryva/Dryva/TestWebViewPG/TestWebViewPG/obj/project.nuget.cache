@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qHWi5y8DUDw=",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Gabriel.Achumba\\Documents\\Softwares\\Dryva\\Dryva\\Dryva\\Dryva\\TestWebViewPG\\TestWebViewPG\\TestWebViewPG.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gabriel.Achumba\\.nuget\\packages\\dryva.webviewpg\\1.0.0.2-alpha\\dryva.webviewpg.1.0.0.2-alpha.nupkg.sha512",
+    "C:\\Users\\Gabriel.Achumba\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Gabriel.Achumba\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Gabriel.Achumba\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Gabriel.Achumba\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\Gabriel.Achumba\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Authors>Eniefiok Eniang</Authors>
     <Company>Dryva Service Transport System Nig. Ltd.</Company>
     <Product>Dryva Utilities Library</Product>

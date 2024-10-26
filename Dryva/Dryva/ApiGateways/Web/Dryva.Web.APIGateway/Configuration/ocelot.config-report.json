@@ -1,6 +1,5 @@
 {
   "ReRoutes": [
-    //Reports Service
     {
       "DownstreamPathTemplate": "/api/Reports",
       "DownstreamScheme": "http",
@@ -34,7 +33,6 @@
       "Priority": 1
     },
     {
-      // Report from customers Service
       "DownstreamPathTemplate": "/api/Customers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -51,7 +49,6 @@
       "Priority": 2
     },
     {
-      // Report from Shareholders Service
       "DownstreamPathTemplate": "/api/Shareholders",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -68,7 +65,6 @@
       "Priority": 2
     },
     {
-      // Report from RTPSs Service
       "DownstreamPathTemplate": "/api/RTPSs",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -85,7 +81,6 @@
       "Priority": 2
     },
     {
-      // Report from Drivers Service
       "DownstreamPathTemplate": "/api/Drivers",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -102,7 +97,6 @@
       "Priority": 2
     },
     {
-      // Report from maps Service
       "DownstreamPathTemplate": "/api/Maps",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -126,7 +120,6 @@
         "state"
       ],
       "UpstreamPathTemplate": "/Reports/customermap",
-      //"Aggregator": "CustomerAggregator",
       "Priority": 3
     },
     {

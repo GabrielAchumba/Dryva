@@ -1,6 +1,5 @@
 {
   "ReRoutes": [
-      //Subscriptions Service
     {
       "DownstreamPathTemplate": "/api/customers",
       "DownstreamScheme": "http",

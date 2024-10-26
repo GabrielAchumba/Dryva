@@ -109,8 +109,9 @@ namespace Dryva.Security
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Dryva Device API v1");
             });
 
-            var seeder = serviceProvider.GetService<IDbSeeder>();
-            seeder.CreateAdminCredentials();
+            //To be uncommented soon
+            //var seeder = serviceProvider.GetService<IDbSeeder>();
+            //seeder.CreateAdminCredentials();
         }
     }
 }

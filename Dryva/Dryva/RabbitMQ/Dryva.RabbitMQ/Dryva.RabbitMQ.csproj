@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Authors>Felix Gift - FG</Authors>
     <Company>Redi Consults Ltd</Company>
     <PackageId>Redi.APICommunication</PackageId>

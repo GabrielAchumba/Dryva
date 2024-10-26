@@ -1,6 +1,5 @@
 {
   "ReRoutes": [
-    //Map Service
     {
       "DownstreamPathTemplate": "/api/maps",
       "DownstreamScheme": "http",

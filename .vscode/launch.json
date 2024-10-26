@@ -1,0 +1,199 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Dryva_Devices",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Dryva/Dryva/Services/Devices/Dryva.Devices/bin/Debug/net8.0/Dryva.Devices.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Dryva/Dryva/Services/Devices/Dryva.Devices",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Dryva/Dryva/Services/Devices/Dryva.Devices/Views"
+            }
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Dryva_Security",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Dryva/Dryva/Services/Dryva.Security/bin/Debug/net8.0/Dryva.Security.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Dryva/Dryva/Services/Dryva.Security",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Dryva/Dryva/Services/Dryva.Security/Views"
+            }
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Dryva_Enrollment",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Dryva/Dryva/Services/Enrollment/Dryva.Enrollment/bin/Debug/net8.0/Dryva.Enrollment.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Dryva/Dryva/Services/Enrollment/Dryva.Enrollment",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Dryva/Dryva/Services/Enrollment/Dryva.Enrollment/Views"
+            }
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Dyrva_Maps",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Dryva/Dryva/Services/Maps/Dryva.Maps/bin/Debug/net8.0/Dryva.Maps.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Dryva/Dryva/Services/Maps/Dryva.Maps",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Dryva/Dryva/Services/Maps/Dryva.Maps/Views"
+            }
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Dyrva_Reports",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Dryva/Dryva/Services/Reports/Dryva.Reports/bin/Debug/net8.0/Dryva.Reports.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Dryva/Dryva/Services/Reports/Dryva.Reports",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Dryva/Dryva/Services/Reports/Dryva.Reports/Views"
+            }
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Dryva_Customer_Subscription",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Dryva/Dryva/Services/Subscriptions/CustomerSubscription.API/bin/Debug/net8.0/CustomerSubscription.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Dryva/Dryva/Services/Subscriptions/CustomerSubscription.API",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Dryva/Dryva/Services/Subscriptions/CustomerSubscription.API/Views"
+            }
+        },
+        {
+            // Use IntelliSense to find out which attributes exist for C# debugging
+            // Use hover for the description of the existing attributes
+            // For further information visit https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md.
+            "name": "Dryva_Vendor_Subscription",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/Dryva/Dryva/Services/Subscriptions/Dryva.VendorSubscription.API/bin/Debug/net8.0/Dryva.VendorSubscription.API.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Dryva/Dryva/Services/Subscriptions/Dryva.VendorSubscription.API",
+            "stopAtEntry": false,
+            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/Dryva/Dryva/Services/Subscriptions/Dryva.VendorSubscription.API/Views"
+            }
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ],
+    "compounds": [
+      {
+        "name": "Dryva_Microservices",
+        "configurations": [
+            "Dryva_Devices", 
+            "Dryva_Security", 
+            "Dryva_Enrollment",
+            "Dyrva_Maps",
+            "Dyrva_Reports",
+            "Dryva_Customer_Subscription",
+            "Dryva_Vendor_Subscription"
+        ]
+      }
+    ]
+}

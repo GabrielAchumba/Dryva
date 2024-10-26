@@ -1,6 +1,5 @@
 {
   "ReRoutes": [
-    //Devices Service
     {
       "DownstreamPathTemplate": "/api/Devices",
       "DownstreamScheme": "http",
@@ -31,7 +30,6 @@
         "Type": "RoundRobin"
       }
     },
-    //Routes
     {
       "DownstreamPathTemplate": "/api/Routes",
       "DownstreamScheme": "http",

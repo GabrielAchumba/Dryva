@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "00ll4+CKBXeyb12UzqgdR2UsZoGsV6+Qfx2S33jvzzU=",
+  "Source": "Dryva.Devices",
+  "BasePath": "_content/Dryva.Devices",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Dryva.Reports.props" />
+</Project>

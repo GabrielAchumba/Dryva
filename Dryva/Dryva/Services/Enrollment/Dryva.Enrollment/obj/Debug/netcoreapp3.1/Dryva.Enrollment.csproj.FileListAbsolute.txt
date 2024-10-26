@@ -1,0 +1,8 @@
+C:\Users\Gabriel.Achumba\Documents\Softwares\Dryva\Dryva\Dryva\Dryva\Services\Enrollment\Dryva.Enrollment\obj\Debug\netcoreapp3.1\Dryva.Enrollment.csproj.AssemblyReference.cache
+C:\Users\Gabriel.Achumba\Documents\Softwares\Dryva\Dryva\Dryva\Dryva\Services\Enrollment\Dryva.Enrollment\obj\Debug\netcoreapp3.1\Dryva.Enrollment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gabriel.Achumba\Documents\Softwares\Dryva\Dryva\Dryva\Dryva\Services\Enrollment\Dryva.Enrollment\obj\Debug\netcoreapp3.1\Dryva.Enrollment.AssemblyInfoInputs.cache
+C:\Users\Gabriel.Achumba\Documents\Softwares\Dryva\Dryva\Dryva\Dryva\Services\Enrollment\Dryva.Enrollment\obj\Debug\netcoreapp3.1\Dryva.Enrollment.AssemblyInfo.cs
+C:\Users\Gabriel.Achumba\Documents\Softwares\Dryva\Dryva\Dryva\Dryva\Services\Enrollment\Dryva.Enrollment\obj\Debug\netcoreapp3.1\Dryva.Enrollment.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel.Achumba\Documents\Softwares\Dryva\Dryva\Dryva\Dryva\Services\Enrollment\Dryva.Enrollment\obj\Debug\netcoreapp3.1\Dryva.Enrollment.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Gabriel.Achumba\Documents\Softwares\Dryva\Dryva\Dryva\Dryva\Services\Enrollment\Dryva.Enrollment\obj\Debug\netcoreapp3.1\Dryva.Enrollment.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gabriel.Achumba\Documents\Softwares\Dryva\Dryva\Dryva\Dryva\Services\Enrollment\Dryva.Enrollment\obj\Debug\netcoreapp3.1\Dryva.Enrollment.sourcelink.json

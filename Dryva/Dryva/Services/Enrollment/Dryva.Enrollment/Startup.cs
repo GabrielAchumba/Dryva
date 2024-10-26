@@ -48,7 +48,7 @@ namespace Dryva.Enrollment
                 app.UseDeveloperExceptionPage();
 
                 //seed
-                SeedDatabaseHelper.SeedDB(app, env);
+                //SeedDatabaseHelper.SeedDB(app, env);
             }
 
             app.UseHttpsRedirection();

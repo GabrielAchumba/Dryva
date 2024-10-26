@@ -1,6 +1,5 @@
 {
   "ReRoutes": [
-    //Customer Service
     {
       "DownstreamPathTemplate": "/api/customers",
       "DownstreamScheme": "http",
@@ -32,7 +31,6 @@
         "Type": "RoundRobin"
       }
     },
-    //Drivers Service
     {
       "DownstreamPathTemplate": "/api/drivers",
       "DownstreamScheme": "http",
@@ -63,7 +61,6 @@
         "Type": "RoundRobin"
       }
     },
-    //Sharedholders Service
     {
       "DownstreamPathTemplate": "/api/Shareholders",
       "DownstreamScheme": "http",
@@ -94,7 +91,6 @@
         "Type": "RoundRobin"
       }
     },
-    //RTPSs Service
     {
       "DownstreamPathTemplate": "/api/RTPSs",
       "DownstreamScheme": "http",
@@ -125,7 +121,6 @@
         "Type": "RoundRobin"
       }
     },
-    //States Service
     {
       "DownstreamPathTemplate": "/api/States",
       "DownstreamScheme": "http",
@@ -157,7 +152,6 @@
         "Type": "RoundRobin"
       }
     },
-    //LGAs Service
     {
       "DownstreamPathTemplate": "/api/LGAs",
       "DownstreamScheme": "http",

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "PLHaeBZYb4q0JvREcQS45KS0bCaPlkXDeT6E6RvIa8o=",
+  "Source": "Dryva.VendorSubscription.API",
+  "BasePath": "_content/Dryva.VendorSubscription.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

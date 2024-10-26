@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mgso5mMu6iDGsekAisG/pqEuyS5lSNvBJzrwLgFDy7A=",
+  "Source": "CustomerSubscription.API",
+  "BasePath": "_content/CustomerSubscription.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
