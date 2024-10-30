@@ -8900,11 +8900,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabriel.Achumba\\Documents\\Softwares\\Dryva\\Dryva\\Dryva\\Dryva\\Services\\Subscriptions\\CustomerSubscription.API\\CustomerSubscription.API.csproj",
+      "projectUniqueName": "c:\\Users\\Gabriel.Achumba\\Documents\\Softwares\\Dryva\\Dryva\\Dryva\\Dryva\\Services\\Subscriptions\\CustomerSubscription.API\\CustomerSubscription.API.csproj",
       "projectName": "CustomerSubscription.API",
-      "projectPath": "C:\\Users\\Gabriel.Achumba\\Documents\\Softwares\\Dryva\\Dryva\\Dryva\\Dryva\\Services\\Subscriptions\\CustomerSubscription.API\\CustomerSubscription.API.csproj",
+      "projectPath": "c:\\Users\\Gabriel.Achumba\\Documents\\Softwares\\Dryva\\Dryva\\Dryva\\Dryva\\Services\\Subscriptions\\CustomerSubscription.API\\CustomerSubscription.API.csproj",
       "packagesPath": "C:\\Users\\Gabriel.Achumba\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabriel.Achumba\\Documents\\Softwares\\Dryva\\Dryva\\Dryva\\Dryva\\Services\\Subscriptions\\CustomerSubscription.API\\obj\\",
+      "outputPath": "c:\\Users\\Gabriel.Achumba\\Documents\\Softwares\\Dryva\\Dryva\\Dryva\\Dryva\\Services\\Subscriptions\\CustomerSubscription.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gabriel.Achumba\\AppData\\Roaming\\NuGet\\NuGet.Config",

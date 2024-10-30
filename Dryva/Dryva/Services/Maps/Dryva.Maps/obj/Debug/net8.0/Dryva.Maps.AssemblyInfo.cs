@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dryva.Maps")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b455d50ec36d3d895df4bc51df45f520da6bc4b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c12328264aa55cb8d6d4e6005678cc116d78b27d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dryva.Maps")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dryva.Maps")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
